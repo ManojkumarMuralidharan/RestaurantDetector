@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/selectedcard">
+    
+    <RelativeLayout 
+    android:id="@+id/selected_card_relativelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selectedcard">
+    
+    
+	<ImageView 
+	    android:id="@+id/selected_resutcard_Image"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:background="@drawable/imagecorner"
+    	android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+    	android:layout_alignParentTop="true"
+    	android:contentDescription="@string/resultCardImage"/>
+	
+	<TextView 
+	    android:id="@+id/selected_resutcard_name"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="80dip"
+        android:layout_marginTop="15dip"
+        android:gravity="left"
+        android:textAlignment="gravity"
+    	android:textAppearance="?android:attr/textAppearanceMedium"
+    	android:layout_toRightOf="@id/selected_resutcard_Image"
+    	/>
+	<TextView 
+	    android:id="@+id/selected_resutcard_address"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="80dip"
+        android:layout_marginTop="5dip"
+        android:gravity="left"
+        android:textAlignment="gravity"
+    	
+    	android:textAppearance="?android:attr/textAppearanceSmall"
+    	android:layout_below="@id/selected_resutcard_name"
+    	android:layout_toRightOf="@id/selected_resutcard_Image"
+    	/>
+	<TextView 
+	    android:id="@+id/selected_resutcard_phone"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="80dip"
+        android:layout_marginTop="5dip"
+        android:gravity="left"
+        android:textAlignment="gravity"
+    	
+    	android:textAppearance="?android:attr/textAppearanceSmall"
+    	android:layout_below="@id/selected_resutcard_address"
+    	android:layout_toRightOf="@id/selected_resutcard_Image"
+    	/>
+	<TextView 
+	    android:id="@+id/selected_resutcard_distance"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="80dip"
+        android:layout_marginTop="5dip"
+        android:gravity="left"
+        android:textAlignment="gravity"
+    	
+    	android:textAppearance="?android:attr/textAppearanceSmall"
+    	android:layout_below="@id/selected_resutcard_phone"
+    	android:layout_toRightOf="@id/selected_resutcard_Image"
+    	/>
+	<TextView 
+	    android:id="@+id/selected_resutcard_ratingslabel"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="80dip"
+        android:layout_marginTop="5dip"
+        android:gravity="left"
+        android:text="@string/rating"
+        android:textAlignment="gravity"
+    	android:textAppearance="?android:attr/textAppearanceSmall"
+    	android:layout_below="@id/selected_resutcard_distance"
+    	android:layout_toRightOf="@id/selected_resutcard_Image"
+    	/>
+	<RatingBar	 
+	    android:id="@+id/selected_resutcard_ratings"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="20dip"
+        android:gravity="left"
+        android:isIndicator="true"
+    	android:textAppearance="?android:attr/textAppearanceMedium"
+    	android:layout_below="@id/selected_resutcard_distance"
+    	android:layout_toRightOf="@id/selected_resutcard_ratingslabel"
+    	style="@style/foodRatingBar"
+    	/>
+	<TextView 
+	    android:id="@+id/selected_resutcard_websitelabel"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="80dip"
+        android:layout_marginTop="5dip"
+        android:gravity="left"
+        android:text="Website"
+        android:textAlignment="gravity"
+    	android:textAppearance="?android:attr/textAppearanceSmall"
+    	android:layout_below="@id/selected_resutcard_ratings"
+    	android:layout_toRightOf="@id/selected_resutcard_Image"
+    	/>
+	<TextView 
+	    android:id="@+id/selected_resutcard_website"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="80dip"
+        android:layout_marginTop="5dip"
+        android:paddingBottom="10dip"
+        android:gravity="left"
+        android:textAlignment="gravity"
+    	android:textAppearance="?android:attr/textAppearanceSmall"
+    	android:layout_below="@id/selected_resutcard_websitelabel"
+    	android:layout_toRightOf="@id/selected_resutcard_Image"
+    	/>
+	</RelativeLayout>
+
+	<RelativeLayout 
+	android:id="@+id/review_list_relativelayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selectedcard"
+    android:paddingBottom="5dp"
+    android:layout_below="@id/selected_card_relativelayout"
+    android:layout_alignParentLeft="true">
+	<TextView
+	    android:id="@+id/selected_resutcard_reviews_label"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:text="Reviews"
+    	android:paddingTop="10dip"
+    	android:paddingBottom="5dip"
+    	android:layout_marginLeft="10dip"
+    	android:textAppearance="?android:attr/textAppearanceMedium"
+         />
+	<ToggleButton android:id="@+id/selected_resutcard_reviews_ToggleButton"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentRight="true"
+    	android:textOn=""
+    	android:textOff=""
+    	android:background="@drawable/reviewlisttogglebutton"
+    	/>
+    <ListView 
+		android:layout_height="150dp" 
+		android:layout_width="fill_parent" 
+		android:dividerHeight="10dip"
+		android:id="@+id/review_list" 
+        android:layout_marginTop="10dip"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="5dip"
+        android:layout_below="@id/selected_resutcard_reviews_label"
+        android:visibility="gone"
+    	/>
+    
+    </RelativeLayout>	
+    	
+	
+	<RelativeLayout
+	android:id="@+id/review_list_map_layout" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dip"
+    android:layout_below="@id/review_list_relativelayout"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/selectedcard">
+    <TextView
+	    android:id="@+id/selected_resutcard_Direction_label"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:text="Directions"
+    	android:paddingTop="10dip"
+    	android:paddingBottom="5dip"
+    	android:layout_marginLeft="10dip"
+    	android:textAppearance="?android:attr/textAppearanceMedium"
+         />
+
+    <fragment
+ 		android:id="@+id/map"
+ 		android:layout_below="@id/selected_resutcard_Direction_label"
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+ 		android:layout_marginLeft="20dip"
+ 		android:layout_marginRight="20dip"
+ 		android:layout_alignParentBottom="true"
+ 		class="com.google.android.gms.maps.SupportMapFragment"/>
+	    
+	
+
+    		
+    		    
+	</RelativeLayout>
+	
+<RelativeLayout 
+    android:id="@+id/yelp_footer"
+    android:background="#222222"
+    android:layout_alignParentBottom="true" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     >
+    
+<ImageView 
+    android:id="@+id/yelp_logo_image"
+    android:src="@drawable/yelp_logo"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:contentDescription="Footer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+</ImageView>
+
+<TextView 
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:textColor="#ffffff"
+    android:text="Powered by Yelp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
+	
+
+</RelativeLayout>

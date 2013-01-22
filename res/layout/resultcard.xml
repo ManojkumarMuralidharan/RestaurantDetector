@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/resultCardRelativeLayout"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:focusableInTouchMode="false"
+  android:focusable="false"
+  android:background="@drawable/resultcard"
+  android:descendantFocusability="blocksDescendants"
+ >
+  
+     
+     
+     <ImageView android:id="@+id/resultCardImage"
+         android:contentDescription="@string/resultCardImage"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/distance"
+         android:layout_marginLeft="20dip"
+         android:layout_marginTop="20dip"
+         android:layout_alignParentTop="true"
+         android:layout_alignParentLeft="true"
+         android:focusableInTouchMode="false"
+		 android:focusable="false"
+
+      />
+     <TextView android:id="@+id/resultCardname"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/distance"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:layout_marginLeft="80dip"
+         android:layout_marginTop="20dip"
+         android:gravity="left"
+         android:textAlignment="gravity"
+         android:layout_toRightOf="@id/resultCardImage"
+         android:focusableInTouchMode="false"
+		 android:focusable="false"
+     />
+     <TextView android:id="@+id/resultCardaddress"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/distance"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         
+         android:layout_below="@id/resultCardname"
+         android:layout_toRightOf="@id/resultCardImage"
+         android:layout_marginLeft="80dip"
+         android:focusableInTouchMode="false"
+		 android:focusable="false"
+         
+     />
+     <TextView android:id="@+id/resultCardPhonenumber"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/distance"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         
+         android:layout_below="@id/resultCardaddress"
+         android:layout_toRightOf="@id/resultCardImage"
+         android:layout_marginLeft="80dip"
+         android:focusableInTouchMode="false"
+		 android:focusable="false"
+     />
+     <TextView android:id="@+id/resultCarddistance"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/distance"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         
+         android:layout_below="@id/resultCardPhonenumber"
+         android:layout_toRightOf="@id/resultCardImage"
+         android:layout_marginLeft="80dip"
+         android:focusableInTouchMode="false"
+		 android:focusable="false"
+     />
+     <RatingBar android:id="@+id/resultCardratingsBar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/distance"
+         android:layout_below="@id/resultCarddistance"
+         android:layout_toRightOf="@id/resultCardImage"
+         android:layout_marginLeft="80dip"
+         android:isIndicator="true"
+         style="@style/resultFoodRatingBar"
+         android:focusableInTouchMode="false"
+		 android:focusable="false"
+     />
+     <TextView android:id="@+id/resultCardNoOfReviews"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/distance"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         
+         android:layout_below="@id/resultCarddistance"
+         android:layout_toRightOf="@id/resultCardratingsBar"
+         android:layout_marginTop="10dip"
+         android:focusableInTouchMode="false"
+		 android:focusable="false"
+     />
+     
+
+     
+     
+     
+</RelativeLayout>

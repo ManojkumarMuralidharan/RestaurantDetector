@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/resultsList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    >
+
+    <ListView 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:dividerHeight="20dip"
+		android:id="@android:id/list" 
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:visibility="visible"
+		/>
+    
+    <RelativeLayout
+        android:id="@id/android:empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/noresults"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/android:nosearch_result_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/noresults"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_gravity="center"
+            android:src="@drawable/search_noresults"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/android:nosearch_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/android:nosearch_result_image"
+            android:layout_below="@+id/android:nosearch_result_image"
+            android:text="@string/noresults"
+            android:textAlignment="gravity" />
+        <TextView
+            android:id="@+id/android:nosearch_result_text_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/android:nosearch_result_image"
+            android:layout_below="@+id/android:nosearch_result_text"
+            android:text="@string/noresultsextra"
+            android:textAlignment="gravity" />
+
+    </RelativeLayout>
+  	<RelativeLayout 
+    android:id="@+id/yelp_footer"
+    android:background="#222222"
+    android:layout_alignParentBottom="true" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     >
+    
+<ImageView 
+    android:id="@+id/yelp_logo_image"
+    android:src="@drawable/yelp_logo"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:contentDescription="Footer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+</ImageView>
+
+<TextView 
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:textColor="#ffffff"
+    android:text="Powered by Yelp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+</RelativeLayout>
+    
+</RelativeLayout>
+

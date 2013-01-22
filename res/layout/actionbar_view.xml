@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/d"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+<TextView android:id="@+id/activityId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:paddingLeft="5dip"
+      android:textAppearance="@android:style/TextAppearance.Medium"
+      android:layout_alignParentLeft="true"
+     />
+
+<ImageButton android:id="@+id/search_food"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/search"
+      android:contentDescription="@string/app_name"
+      android:layout_alignParentRight="true"
+      android:focusable="false"
+      android:focusableInTouchMode="false"
+      android:background="#0000"
+      />
+ 
+  <EditText
+      android:id="@+id/search_string_food"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="4dip"
+      android:width="200sp"
+      android:inputType="text"
+      android:imeActionId="1337"
+      android:imeOptions="actionDone"
+      android:layout_toLeftOf="@id/search_food"
+      />
+   <TextView
+     android:id="@+id/searchLabelId"
+      android:text="@string/searchLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAppearance="@android:style/TextAppearance.Medium"
+      android:layout_toLeftOf="@id/search_string_food"
+      />
+  
+<ImageButton
+    android:id="@+id/actionbar_popup_button"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:background="@drawable/ic_menu_overflow_dark_white"
+    android:contentDescription="@string/descr_overflow_button"
+    android:layout_toRightOf="@id/search_food"
+    android:onClick="showPopup"
+    android:visibility="invisible"
+    />
+</RelativeLayout> 

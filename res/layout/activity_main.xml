@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/homescreen_layout" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:background="@drawable/homescrollbar_outline">
+    
+
+<ScrollView android:id="@+id/homescreen_scroll" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:background="@drawable/homescrollbar_outline">
+    
+    
+
+
+<RelativeLayout
+    
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="1dip"
+    android:layout_marginRight="1dip"
+    android:layout_marginTop="1dip"
+    android:paddingLeft="0dp"
+    android:scrollY="2dp"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout android:id="@+id/user_details" 
+     android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#4A4344"
+    android:paddingTop="20dip"
+    android:paddingBottom="20dip"
+    android:layout_alignParentTop="true">
+        
+        <ImageView android:id="@+id/user_image"
+            android:src="@drawable/male"
+            android:layout_width="wrap_content"
+            android:contentDescription="User Image"
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="10dip"
+    		android:layout_alignParentTop="true"
+    		android:layout_alignParentLeft="true"/>
+        
+        <TextView
+            android:id="@+id/user_welcome_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/user_image"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/welcomeText" />
+        <TextView
+            android:id="@+id/user_welcome_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/user_image"
+            android:layout_below="@id/user_welcome_text"
+            android:textColor="#FFFFFF"
+            />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/user_welcome_text"
+            android:layout_marginRight="42dp"
+            android:textColor="#ffffff"
+            android:text="@string/time" />
+
+    </RelativeLayout>
+    <TextView android:id="@+id/filter_label"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:textAppearance="?android:attr/textAppearanceMedium"
+    	android:paddingTop="10dip"
+    	android:paddingBottom="10dip"
+    	android:paddingLeft="10dip"
+    	android:layout_marginLeft="5dip"
+    	android:layout_marginRight="5dip"
+    	android:layout_marginTop="2dip"
+    	android:text="@string/filters"
+    	android:background="@drawable/filter_background"
+    	android:layout_below="@id/user_details"
+        />
+
+ 
+ <RelativeLayout android:id="@+id/mile_layout" 
+     android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/filter_label"
+    android:layout_marginTop="5dip"
+    android:paddingLeft="10dp"
+    android:layout_marginBottom="5dip"
+    >
+    
+ <ToggleButton
+     android:id="@+id/distanceLabel"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentLeft="true"
+     android:background="@drawable/prefrencetogglebutton"
+     android:textAlignment="gravity"
+     android:gravity="center"
+     android:text="@string/distance"
+     android:textAppearance="?android:attr/textAppearanceSmall"
+     android:textOff="@string/distance"
+     android:textOn="@string/distance"
+     android:width="10dip" />
+    
+<ToggleButton
+    android:id="@+id/milebutton1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/mile1"
+    android:minHeight="33dip"
+    android:maxHeight="35dip"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:minWidth="33dip"
+    android:maxWidth="35dip"
+    android:layout_marginTop="3dip"
+    android:onClick="ButtonOnClick"
+    android:background="@drawable/milebutton1"
+    android:clickable="true"
+    style="@style/Widget.Button.Toggle"
+    android:layout_toRightOf="@id/distanceLabel"
+    android:visibility="invisible"
+    />
+
+<ToggleButton android:layout_width="wrap_content" 
+    android:id="@+id/milebutton2" 
+    android:minHeight="33dip"
+    android:maxHeight="35dip"
+    android:minWidth="33dip"
+    android:maxWidth="35dip"
+    android:layout_marginTop="3dip"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:onClick="ButtonOnClick"
+    android:background="@drawable/milebutton2"
+    android:layout_height="wrap_content" 
+    android:contentDescription="@string/mile2" 
+    android:layout_toRightOf="@id/milebutton1"
+    android:clickable="true"
+    style="@style/Widget.Button.Toggle"
+    android:visibility="invisible"
+    />
+<ToggleButton android:layout_width="wrap_content" android:id="@+id/milebutton3" 
+    android:minHeight="33dip"
+    android:maxHeight="35dip"
+    android:minWidth="33dip"
+    android:maxWidth="35dip"
+    android:layout_marginTop="3dip"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:onClick="ButtonOnClick"
+    android:background="@drawable/milebutton3"
+    android:layout_height="wrap_content" 
+    android:contentDescription="@string/mile3" 
+    android:layout_toRightOf="@id/milebutton2"
+    android:clickable="true" 
+    style="@style/Widget.Button.Toggle"
+    android:visibility="invisible"
+    />
+<ToggleButton android:layout_width="wrap_content" android:id="@+id/milebutton5" 
+    android:minHeight="33dip"
+    android:maxHeight="35dip"
+    android:minWidth="33dip"
+    android:maxWidth="35dip"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:layout_marginTop="3dip"
+    android:onClick="ButtonOnClick"
+    android:background="@drawable/milebutton5"
+    android:layout_height="wrap_content" 
+    android:contentDescription="@string/mile5" 
+    android:layout_toRightOf="@id/milebutton3"
+    android:clickable="true" 
+    style="@style/Widget.Button.Toggle"
+    android:visibility="invisible"
+    />
+<ToggleButton android:layout_width="wrap_content" android:id="@+id/milebutton10" 
+    android:minHeight="33dip"
+    android:maxHeight="35dip"
+    android:minWidth="33dip"
+    android:maxWidth="35dip"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:layout_marginTop="3dip"
+    android:onClick="ButtonOnClick"
+    android:background="@drawable/milebutton10"
+    android:layout_height="wrap_content" 
+    android:contentDescription="@string/mile10" 
+    android:layout_toRightOf="@id/milebutton5"
+    android:clickable="true" 
+    style="@style/Widget.Button.Toggle"
+    android:visibility="invisible"
+    />     
+     
+      
+ </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/relativeLayoutPrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+    	android:layout_marginBottom="5dip"
+    	android:paddingLeft="10dp"
+        android:layout_below="@id/mile_layout" >
+
+             <ToggleButton android:id="@+id/priceLabel"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:text="@string/price"
+			 android:textAppearance="?android:attr/textAppearanceSmall"
+			 android:background="@drawable/prefrencetogglebutton"
+			 android:layout_alignParentLeft="true"
+			 android:textAlignment="gravity"
+             android:gravity="center"
+			 android:textOn="@string/price"
+    		 android:textOff="@string/price"
+    		 android:width="80dip" 
+			 />
+			
+			<RatingBar
+			    android:id="@+id/priceBar"
+			    style="@style/priceRatingBar"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    
+			    android:layout_toRightOf="@id/priceLabel"
+			    android:max="5"
+			    android:visibility="invisible" >
+
+			</RatingBar>
+ 
+
+    </RelativeLayout>
+    
+    <RelativeLayout android:id="@+id/relativeLayoutRating"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+    	android:layout_marginBottom="5dip"
+    	android:paddingLeft="10dp"
+        android:layout_below="@id/relativeLayoutPrice" >
+        
+        <ToggleButton
+            android:id="@+id/ratingsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/rating"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/prefrencetogglebutton"
+            android:textOn="@string/rating"
+            android:textOff="@string/rating"
+            
+            android:width="80dip"
+             />
+			
+			<RatingBar
+			    android:id="@+id/ratingsBar"
+			    style="@style/foodRatingBar"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:max="5"
+			    android:visibility="invisible"
+			    android:layout_toRightOf="@id/ratingsLabel" >
+
+			</RatingBar>
+        
+    </RelativeLayout>
+
+
+        <TextView android:id="@+id/filters_used_label"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:textAppearance="?android:attr/textAppearanceMedium"
+    	android:background="@drawable/filter_background"
+    	android:layout_marginLeft="5dip"
+    	android:layout_marginRight="5dip"
+    	android:paddingTop="10dip"
+    	android:paddingBottom="10dip"
+    	android:paddingLeft="10dip"
+    	android:text="@string/filters_used"
+    	android:layout_below="@id/relativeLayoutRating"
+        />
+    
+        <RelativeLayout 
+        android:id="@+id/relativeLayoutDistanceCard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filters_used_label"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:visibility="invisible" >
+
+             <TextView android:id="@+id/distanceLabelCard"
+			 android:layout_width="fill_parent"
+			 android:layout_height="wrap_content"
+			 android:text="@string/distance"
+			 android:textAppearance="?android:attr/textAppearanceSmall"
+			 android:layout_alignParentLeft="true"
+    		 android:paddingTop="10dip"
+    		 android:paddingBottom="10dip"
+    		 android:paddingLeft="10dip"
+    		 android:background="@drawable/card"
+    		 android:gravity="left"
+    		  
+			 />
+      </RelativeLayout>
+    	
+        <RelativeLayout 
+        android:id="@+id/relativeLayoutPriceCard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutDistanceCard"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:visibility="invisible" >
+
+             <TextView android:id="@+id/priceLabelCard"
+			 android:layout_width="fill_parent"
+			 android:layout_height="wrap_content"
+			 android:text="@string/price"
+			 android:textAppearance="?android:attr/textAppearanceSmall"
+			 android:layout_alignParentLeft="true"
+    		 android:paddingTop="10dip"
+    		 android:paddingBottom="10dip"
+    		 android:paddingLeft="10dip"
+    		 android:background="@drawable/card"
+    		 android:gravity="left"
+    		  
+			 />
+      </RelativeLayout>
+    
+        <RelativeLayout 
+        android:id="@+id/relativeLayoutRatingsCard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutPriceCard"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:visibility="invisible" >
+
+             <TextView android:id="@+id/ratingsLabelCard"
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content"
+			 android:text="@string/rating"
+			 android:textAppearance="?android:attr/textAppearanceSmall"
+			 android:layout_alignParentLeft="true"
+			 android:textOn="@string/price"
+    		 android:textOff="@string/price"
+    		 android:paddingTop="10dip"
+    		 android:paddingBottom="10dip"
+    		 android:paddingLeft="10dip"
+    		 android:gravity="left"
+    		 android:background="@drawable/card"
+    		  
+			 />
+             
+      </RelativeLayout>
+
+        
+</RelativeLayout>
+
+</ScrollView>
+
+<RelativeLayout 
+    android:id="@+id/yelp_footer"
+    android:background="#222222"
+    android:layout_alignParentBottom="true" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     >
+    
+<ImageView 
+    android:id="@+id/yelp_logo_image"
+    android:src="@drawable/yelp_logo"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:contentDescription="Footer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+</ImageView>
+
+<TextView 
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:textColor="#ffffff"
+    android:text="Powered by Yelp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
+	        
+</RelativeLayout>
+
+
+
+

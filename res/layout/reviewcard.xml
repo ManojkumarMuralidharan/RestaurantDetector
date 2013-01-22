@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reviewcard_row"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reviewerscard" >
+    
+
+	<TextView
+	    android:id="@+id/review_reviewer_name"
+	    android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:layout_marginTop="10dip"
+   		android:layout_marginLeft="10dip" 
+   		android:layout_alignParentTop="true"
+   		android:textAppearance="?android:attr/textAppearanceMedium"
+   		android:textStyle="bold"
+	    />
+	<TextView 
+	    android:id="@+id/review_review_text_label"
+	    android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:layout_marginTop="10dip"
+   		android:text="@string/reviewerreview"
+   		android:layout_toRightOf="@id/review_reviewer_name"
+   		/>
+	
+	<TextView 
+	    android:id="@+id/review_review_text"
+	    android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+   		android:layout_toRightOf="@id/review_review_text_label"
+   		android:layout_below="@id/review_reviewer_name"/>
+	<RatingBar
+	    android:id="@+id/review_review_rating"
+	    android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:isIndicator="true"
+   		android:layout_toRightOf="@id/review_review_text_label"
+   		android:layout_below="@id/review_review_text"
+   		style="@style/resultFoodRatingBar" />
+</RelativeLayout>

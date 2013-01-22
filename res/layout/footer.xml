@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/yelp_footer"
+    android:background="#222222"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     >
+    
+<ImageView 
+    android:id="@+id/yelp_logo_image"
+    android:src="@drawable/yelp_logo"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:contentDescription="Footer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+</ImageView>
+
+<TextView 
+    android:layout_alignParentRight="true"
+    android:text="Powered by Yelp"
+    android:layout_below="@id/yelp_logo_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

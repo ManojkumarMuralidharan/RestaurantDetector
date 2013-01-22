@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/food_rating_bar_full</item>
+        <item name="android:minHeight">53dip</item>
+        <item name="android:maxHeight">55dip</item>
+    </style>
+    <style name="resultFoodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/food_rating_bar_full</item>
+        <item name="android:minHeight">53dip</item>
+        <item name="android:maxHeight">55dip</item>
+    </style>
+    
+    
+
+    <style name="nosearchResult"></style>
+
+    <style name="priceRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/price_rating_bar_full</item>
+        <item name="android:minHeight">37dip</item>
+        <item name="android:maxHeight">40dip</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:numStars">5</item>
+    </style>
+    <!-- Overwrite the ToggleButton style -->
+    <style name="Widget.Button.Toggle" parent="android:Widget">
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+        <item name="android:minHeight">27dip</item>
+        <item name="android:maxHeight">30dip</item>
+        <item name="android:minWidth">27dip</item>
+        <item name="android:maxWidth">30dip</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+</resources>
